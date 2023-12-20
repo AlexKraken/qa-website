@@ -1,7 +1,8 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy, create_engine
+from flask_sqlalchemy import SQLAlchemy
 from config import Config
 import os
+import sqlalchemy
 
 db = SQLAlchemy()
 
@@ -21,8 +22,8 @@ def create_app() -> Flask:
     #    db.create_all()
 
     # Check if the database needs to be initialized
-    engine = SQLAlchemy.create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
-    inspector = SQLAlchemy.inspect(engine)
+    engine = sqlalchemy.create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
+    inspector = sqlalchemy.inspect(engine)
     if not inspector.has_table("barcodes"):
         with app.app_context():
             db.drop_all()
