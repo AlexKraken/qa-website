@@ -1,5 +1,7 @@
 # QA Website
+[![QA Website Screen Shot][website-screenshot]](https://github.com/AlexKraken/qa-website)
 This is a rough draft of a Flask website that provides barcode logging and weight calculations.
+Demo (hosted for free on render.com and takes a few minutes to spin up) located here: [https://qa-website.sevenwattdinosaur.com/](https://qa-website.sevenwattdinosaur.com/).
 
 ## Barcode Logger
 
@@ -16,3 +18,5 @@ Note that the 'Check Barcode' and 'Add Barcode' sections are actually implemente
 - [ ] Add color highlighting to messages
 - [ ] Add alternating colors to barcode log
 - [ ] Add ability to populate 'Barcode Logger' with info from 'Weight Checker'
+
+[website-screenshot]: images/screenshot.png
